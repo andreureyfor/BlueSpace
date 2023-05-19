@@ -51,8 +51,8 @@ public class PelisDAO {
 
         String director = " ";
 
-        String sentenciaSql = "SELECT d.nomdirector FROM director AS d "
-                            + "INNER JOIN dirigeix_pelis AS dp ON d.id_director = dp.id_director "
+        String sentenciaSql = "SELECT d.nomdirector FROM director AS 'd' "
+                            + "INNER JOIN dirigeix_pelis AS 'dp' ON d.id_director = dp.id_director "
                             + "WHERE dp.id_director = ? AND dp.id_director = d.id_director";
 
         try ( PreparedStatement ps = con.prepareStatement(sentenciaSql)) {

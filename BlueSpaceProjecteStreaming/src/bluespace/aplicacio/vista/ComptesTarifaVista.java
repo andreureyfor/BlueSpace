@@ -89,7 +89,7 @@ public class ComptesTarifaVista {
         
         CompteDAO compteDAO = new CompteDAO();
         
-        ArrayList<Compte> comptesTarifa = compteDAO.obtenirComptesModalitatBD(modalitat);
+        //ArrayList<Compte> comptesTarifa = compteDAO.obtenirComptesModalitatBD(modalitat);
         
         
         switch (modalitat){
@@ -101,7 +101,7 @@ public class ComptesTarifaVista {
         
         tblContractes.getItems().clear();
         
-        tblContractes.getItems().addAll(comptesTarifa);
+        //tblContractes.getItems().addAll(comptesTarifa);
         
     }
     

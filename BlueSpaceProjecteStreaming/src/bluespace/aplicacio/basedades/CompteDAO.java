@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class CompteDAO {
 
-    public ArrayList<Compte> obtenirComptesModalitatBD(int modalitat) {
+    /*public ArrayList<Compte> obtenirComptesModalitatBD(int modalitat) {
         Connection con = Connexio.getConection();
         
         ArrayList<Compte> c = new ArrayList();
@@ -61,6 +61,6 @@ public class CompteDAO {
         ps.setInt(6, c.getIdModalitat());
         
         
-    }
+    }*/
 
 }

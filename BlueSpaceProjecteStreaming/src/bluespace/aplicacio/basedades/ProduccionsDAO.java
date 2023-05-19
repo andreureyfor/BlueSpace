@@ -15,7 +15,7 @@ public class ProduccionsDAO {
 
         Produccions produccio = null;
 
-        String sentenciaSql = "SELECT id_produccio, nom, nacionalitat, anys, favorit "
+        String sentenciaSql = "SELECT id_produccio, nom, nacionalitat, any_produccio, favorit "
                 + "FROM produccions WHERE id_produccio = ?";
 
         try ( PreparedStatement ps = con.prepareStatement(sentenciaSql)) {
@@ -47,7 +47,7 @@ public class ProduccionsDAO {
         
         p.setId(rs.getInt("id_produccio"));
         p.setNom(rs.getString("nom"));
-        p.setAny(rs.getInt("anys"));
+        p.setAny(rs.getInt("any_produccio"));
         p.setNacionalitat(rs.getString("nacionalitat"));
         p.setFavorit(rs.getInt("favorit"));
         
