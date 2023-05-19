@@ -15,7 +15,7 @@ public class Connexio {
                 String servidor = "jdbc:mysql://localhost:3306/";
                 String bbdd = "bluespace";
                 String user = "root";
-                String paswd = "1234";
+                String paswd = "";
 
                 Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
                 conn = DriverManager.getConnection(servidor + bbdd, user, paswd);

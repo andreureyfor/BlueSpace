@@ -14,15 +14,16 @@ public class PelisDAO {
 
         Pelis p = null;
 
-        String sentenciaSql = "SELECT duracio FROM pelis WHERE id_produccio = ?";
+        String sentenciaSql = "SELECT pelis.id_produccio,nom,any_produccio,nacionalitat,duracio,favorit FROM pelis INNER JOIN produccions ON produccions.id_produccio=pelis.id_produccio WHERE produccions.id_produccio = ? AND produccions.id_produccio=pelis.id_produccio";
 
         try ( PreparedStatement ps = con.prepareStatement(sentenciaSql)) {
 
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-
-                p = dadesBDPelicula(id, rs.getDouble("duracio"));
+                
+                
+                p = dadesBDPelicula(id, rs);
 
             }
 
@@ -33,10 +34,15 @@ public class PelisDAO {
         return p;
     }
 
-    private Pelis dadesBDPelicula(int id, double durada) {
+    private Pelis dadesBDPelicula(int id, ResultSet rs) throws SQLException {
         Pelis p = new Pelis();
-
-        p.setDurada(durada);
+        
+        p.setNom(rs.getString("nom"));
+        p.setAny(rs.getInt("any_produccio"));
+        p.setNacionalitat(rs.getString("nacionalitat"));
+        p.setFavorit(rs.getInt("favorit"));
+        p.setDurada(rs.getInt("duracio"));
+        
 
         p.afegirCategoria(obtenirCategoria(id));
         p.afegirDirector(obtenirDirector(id));
@@ -51,8 +57,8 @@ public class PelisDAO {
 
         String director = " ";
 
-        String sentenciaSql = "SELECT d.nomdirector FROM director AS 'd' "
-                            + "INNER JOIN dirigeix_pelis AS 'dp' ON d.id_director = dp.id_director "
+        String sentenciaSql = "SELECT d.nomdirector FROM director AS d "
+                            + "INNER JOIN dirigeix_pelis AS dp ON d.id_director = dp.id_director "
                             + "WHERE dp.id_director = ? AND dp.id_director = d.id_director";
 
         try ( PreparedStatement ps = con.prepareStatement(sentenciaSql)) {
@@ -78,8 +84,8 @@ public class PelisDAO {
         String categoria = " ";
 
         String sentenciaSql = "SELECT g.nom FROM genere AS g "
-                            + "INNER JOIN pertany_a AS pa ON g.id_categoria = pa.id_categoria"
-                            + "WHERE g.id_categoria = ? AND g.id_categoria = pa.id_categoria";
+                            + "INNER JOIN pertany AS p ON g.id_categoria = p.id_categoria "
+                            + "WHERE g.id_categoria = ? AND g.id_categoria = p.id_categoria";
 
         try ( PreparedStatement ps = con.prepareStatement(sentenciaSql)) {
 
@@ -103,7 +109,7 @@ public class PelisDAO {
 
         String actor = " ";
 
-        String sentenciaSql = "SELECT a.nomactor FROM actor AS a "
+        String sentenciaSql = "SELECT a.nomactor FROM actors AS a "
                             + "INNER JOIN actuen AS at ON a.id_actor = at.id_actor "
                             + "WHERE at.id_actor = ? AND at.id_actor = a.id_actor";
 

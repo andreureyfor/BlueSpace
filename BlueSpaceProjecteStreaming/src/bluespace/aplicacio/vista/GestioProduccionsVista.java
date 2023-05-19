@@ -245,7 +245,7 @@ public class GestioProduccionsVista {
             int id = Integer.parseInt(txtId.getText());
 
             // Inicialitzaem els camps de la pantalla per si hi ha valors d'anteriors operacions
-            //inicalitzarCampsPantallaProduccio();
+            inicialitzarCampsPantallaProduccio();
             // creem un objecte ProduccioDAO per accedir a les dades de Producció a la Base de dades
             ProduccionsDAO prodDAO = new ProduccionsDAO();
 
@@ -253,7 +253,7 @@ public class GestioProduccionsVista {
             if (produccio == null) {
                 AlertVista.alertInformacio("No existeix aquest identificador de produccio");
             } else {
-                //dadesProduccioaAPantalla(produccio);
+                dadesProduccioAPantalla(produccio);
                 // accedim a la taula Pelis de Base de dades per comprovar si es tracta d'una pelicula
                 // creem un objecte PeliculaDAO per accedir a la taula Pelicula
                 PelisDAO peliDAO = new PelisDAO();
