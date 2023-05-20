@@ -9,58 +9,47 @@ import java.util.ArrayList;
 
 public class CompteDAO {
 
-    /*public ArrayList<Compte> obtenirComptesModalitatBD(int modalitat) {
+    public ArrayList<Compte> obtenirComptesModalitatBD(int id_modalitat) {
+        
         Connection con = Connexio.getConection();
         
-        ArrayList<Compte> c = new ArrayList();
+        ArrayList<Compte> comptes = new ArrayList();
 
-        String sentenciaSql = "SELECT * FROM compte AS"
-                + "WHERE s.id_compte = ? AND s.id_produccio = e.id_produccio";
+        String sentenciaSql = null; 
+        
+        if(id_modalitat == 0){
+            
+            sentenciaSql = "SELECT co.id_compte, cl.id_client, cl.nom, cl.dni, co.data_alta, co.id_modalitat "
+                               + "FROM compte co, clients cl WHERE "
+                               + "co.id_client = cl.id_client";
+        } else {
+            
+            sentenciaSql = "SELECT co.id_compte, cl.id_client, cl.nom, cl.dni, co.data_alta, co.id_modalitat "
+                               + "FROM compte co, clients cl WHERE "
+                               + "co.id_modalitat = ? AND "
+                               + "co.id_client = cl.id_client";
+        }
 
         try (PreparedStatement ps = con.prepareStatement(sentenciaSql)) {
-
-            ps.setInt(1, modalitat);
+                if (id_modalitat != 0) ps.setInt(1, id_modalitat);
             ResultSet rs = ps.executeQuery();
-            if (rs.next()) {
-
-                c = c.add(dadesBDCompte(rs));
-
+            
+            while (rs.next()) {
+                Compte c = new Compte();
+                c.setIdCompte(rs.getInt("co.id_compte"));
+                c.setIdClient(rs.getInt("cl.id_client"));
+                c.setDNI(rs.getString("cl.dni"));
+                c.setDataAlta(rs.getDate("co.data_alta").toLocalDate());
+                c.setNomCli(rs.getString("cl.nom"));
+                c.setIdModalitat(rs.getInt("co.id_modalitat"));
+                comptes.add(c);
             }
 
         } catch (SQLException sqle) {
             sqle.printStackTrace();
         }
 
-        return c;
+        return comptes;
     }
-    
-    private Compte dadesBDCompte(ResultSet rs) throws SQLException {
-        Compte c = new Compte();
-        
-        c.setIdCompte(rs.getInt("idCompte"));
-        c.setUsuari(rs.getString("usuari"));
-        c.setContrasenya(rs.getString("contrasenya"));
-        c.setDataAlta(rs.setDataAlta());
-        c.setIdClient(rs.getInt("idClient"));
-        c.setEmail(rs.getString("email"));
-        c.setNomCli(rs.getString("nom"));
-        c.setIdModalitat(rs.getInt("idModalitat"));
-        
-        return c;
-    }
-    
-    private void dadesCompteBD(PreparedStatement ps, Compte c) throws SQLException {
-        
-        ps.setInt(1, c.getIdCompte());
-        ps.setString(2, c.getUsuari());
-        ps.setString(3, c.getContrasenya());
-        ps.setDate(4, c.getDataAlta());
-        ps.setInt(5, c.getIdClient());
-        ps.setString(6, c.getEmail());
-        ps.setString(7, c.getNomCli());
-        ps.setInt(6, c.getIdModalitat());
-        
-        
-    }*/
 
 }

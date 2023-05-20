@@ -85,7 +85,7 @@ public class SeriesDAO {
 
         String sentenciaSql = "SELECT d.nomdirector FROM director AS d "
                             + "INNER JOIN dirigeix_episodi AS de ON d.id_director = de.id_director "
-                            + "WHERE de.id_director = ? AND de.id_director = d.id_director";
+                            + "WHERE de.id_produccio = ? AND de.id_director = d.id_director";
 
         try ( PreparedStatement ps = con.prepareStatement(sentenciaSql)) {
 
@@ -110,8 +110,8 @@ public class SeriesDAO {
         String actor = " ";
 
         String sentenciaSql = "SELECT a.nomactor FROM actors AS a "
-                            + "INNER JOIN actuen AS at ON a.id_actor = at.id_actor "
-                            + "WHERE at.id_actor = ? AND at.id_actor = a.id_actor";
+                            + "INNER JOIN participen AS p ON p.id_actor = a.id_actor "
+                            + "WHERE p.id_produccio = ? AND p.id_actor = a.id_actor";
 
         try ( PreparedStatement ps = con.prepareStatement(sentenciaSql)) {
 

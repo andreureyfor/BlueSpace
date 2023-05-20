@@ -2,7 +2,7 @@ package bluespace.aplicacio.model;
 
 import java.time.LocalDate;
 
-public class Compte {
+public class Compte extends Client{
     
     private int idCompte;
     private String usuari;
@@ -10,7 +10,7 @@ public class Compte {
     private LocalDate dataAlta;
     private int idClient;
     private String email;
-    private String nomCli;
+    
     private int idModalitat;
     
     public int getIdCompte() {
@@ -59,14 +59,6 @@ public class Compte {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getNomCli() {
-        return nomCli;
-    }
-
-    public void setNomCli(String nomCli) {
-        this.nomCli = nomCli;
     }
 
     public int getIdModalitat() {
