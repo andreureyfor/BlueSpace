@@ -10,6 +10,7 @@ BlueSpace és una plataforma dissenyada per oferir als usuaris una àmplia varie
 ## ÚS
 Tindrem dos botons.
   1. Gestio Pelis/Series
-  2. Contactes Clients Tarifa
+  2. Contactes Clients Tarifa.
+
 Dins del primer boto, tindrem un boto per poder consultar totes les pel·licules i series.
 En el segon boto, hi haura un boto per seleccionar la modalitat on podras veure tots els clients que pertanyen a la modalitat seleccionada.
