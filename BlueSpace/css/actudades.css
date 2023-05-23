@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(9, 38, 59, 1) 0%, rgba(11, 86, 126, 1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.actu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.actu label {
+    width: 100%;
+    margin-left: 84rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+
+}
+
+.actu input {
+    padding: 1rem 1rem 5px 2rem;
+    font-size: 1.4rem;
+    border-radius: 1rem;
+    background-color: #f7f7f7;
+    font-family: 'Comfortaa', cursive;
+}
+
+.titol {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    font-size: 4rem;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+}
+
+input[type="submit"] {
+    text-align: center;
+    width: 12%;
+    background: rgb(115, 247, 135);
+    background: radial-gradient(circle, rgba(115, 247, 135, 1) 0%, rgba(255, 249, 124, 1) 100%);
+}
+
+.titolactu {
+    margin-top: -50rem;
+    margin-left: 30rem;
+    width: 20%;
+    padding: 1rem;
+    font-size: 2rem;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+}
+
+.dades {
+    margin-left: 31rem;
+    font-size: 1.6rem;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 15%;
+    padding: 2rem;
+}
+
+.dades span {
+    padding: 2rem;
+}
+
+.selecio {
+    width: 12%;
+    padding: 1rem 1rem 5px 2rem;
+    font-size: 1.4rem;
+    border-radius: 1rem;
+    background-color: #f7f7f7;
+    font-family: 'Comfortaa', cursive;
+}

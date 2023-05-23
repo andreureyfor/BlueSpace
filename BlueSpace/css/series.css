@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+    font-size: 2rem;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-image: url("../imatges/fondoSerie.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h2 {
+    text-align: center;
+    margin: 1rem;
+}
+
+#contingut {
+    border: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+#cercar {
+    border: 2px solid grey;
+    margin: 2rem 1rem;
+    padding: 1rem;
+    width: 85%;
+}
+
+#cercar i{
+    color: white;
+}
+
+#cercar input{
+    background: none;
+    color: white;
+}
+
+
+#series {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.serie {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.prova{
+    width: 100%;
+}
+
+.prova h2{
+    margin: 4rem auto;
+    width: 50%;
+    background: #7491bb;
+    color: #0b1727;
+    border-radius: 3px;
+    padding: 1rem;
+    font-size: 5rem;
+}
+
+.genere {
+    width: 17%;
+    height: 50rem;
+    margin: 0 1rem;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.genere img {
+    border: 2px solid white;
+    padding: 5px;
+    height: 100%;
+    margin-bottom: 1rem;
+}
+
+.genere p {
+    line-height: 3rem;
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: white;
+}
+
+.serie p:nth-child(3) {
+    text-transform: none;
+
+}
+
+input[type="text"] {
+    width: 85%;
+    height: 2.5rem;
+    margin-left: 5px;
+    font-size: 1.5rem;
+    border: none;
+}
+
+input[type="text"]:focus{
+    outline: none;
+}
+
+p{
+    color: white;
+}
+
+
+i{
+    height: 1px;
+
+}

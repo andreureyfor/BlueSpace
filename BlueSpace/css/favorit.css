@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: sans-serif;
+    font-size: 2rem;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-image: url("../imatges/fondoSerie.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h2 {
+    text-align: center;
+    margin: 1rem;
+}
+
+#contingut {
+    border: none;
+    width: 80rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+#cercar {
+    border: 2px solid grey;
+    margin: 2rem 1rem;
+    padding: 1rem;
+    width: 85%;
+}
+
+#pelis {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#pelis h2{
+    color: white;
+    width: 100%;
+}
+
+.peli {
+    width: 15rem;
+    height: 26rem;
+    margin: 0 1rem;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.peli img {
+    border: 2px solid white;
+    padding: 5px;
+    height: 90%;
+    margin-bottom: 1rem;
+}
+
+.peli p {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.peli p:nth-child(3) {
+    text-transform: none;
+
+}
+
+input[type="text"] {
+    width: 85%;
+    height: 2.5rem;
+    margin-left: 5px;
+    font-size: 1.5rem;
+    border: none;
+    background:none;
+    color: white;
+}
+
+input[type="text"]:focus{
+    outline: none;
+}
+
+p{
+    color: white;
+}

@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(9, 38, 59, 1) 0%, rgba(11, 86, 126, 1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+input[type="text"] {
+    width: 40rem;
+    padding: 5px;
+
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+input[type="button"] {
+    padding: 7px;
+    background: rgb(81, 63, 251);
+    background: radial-gradient(circle, rgba(81, 63, 251, 1) 0%, rgba(70, 252, 195, 1) 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+
+}
+
+#contingut {
+    width: 55rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    margin: 2rem auto;
+    border: 2px solid white;
+}
+
+#consulta {
+    text-align: center;
+    margin: 1rem 0;
+    color: white;
+}
+
+#contingut h2 {
+    width: 100%;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+#info p {
+    font-size: 1.3rem;
+    font-weight: normal;
+    margin: 1rem 0;
+    color: white;
+}
+
+#info p:nth-child(3) {
+    line-height: 2rem;
+}
+
+#info p:last-child {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    padding: 2px 4px;
+}
+
+#info p span {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+#poster {
+    border: 2px solid white;
+    padding: 2px;
+    width: 20rem;
+}
+
+#dades {
+    display: flex;
+}
+
+#info {
+    border: 1px solid white;
+    padding: 0 1rem;
+    margin-right: 1rem;
+}

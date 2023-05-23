@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-image: url("../imatges/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.titol {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(22, 54, 143, 0.90);
+    opacity: 1;
+    width: 100%;
+    font-size: 5rem;
+    padding: 1rem;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+}
+
+.registre {
+    background-color: rgba(22, 54, 143, 0.95);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    margin-top: 13rem;
+    padding: 5rem;
+    border-radius: 2rem;
+    width: 30%;
+}
+
+.registre form{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.registre input {
+    margin-top: 2rem;
+    padding: 1.6rem 2rem 5px 2rem;
+    width: 70%;
+    font-size: 1.8rem;
+    border-radius: 1rem;
+    background-color: #f7f7f7;
+    font-family: 'Comfortaa', cursive;
+    margin-left: 3rem;
+}
+
+#boto {
+    width: 70%;
+    padding: 8px;
+
+}
+
+.titol2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 4rem;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+}
+
+
+.logo {
+    width: 7rem;
+}
+
+.avis{
+    margin: 0 auto;
+    text-align: center;
+    width: 27%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Comfortaa', cursive;
+    background-color: rgba(22, 54, 143, 0.90);
+
+}
+
+.noseccio{
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    width: 25%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Comfortaa', cursive;
+    background-color: rgba(22, 54, 143, 0.90);
+}

@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-image: url("../imatges/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+#capcalera {
+    background-color: rgba(22, 54, 143, 0.90);
+    opacity: 1;
+    width: 100%;
+    display: flex;
+
+
+}
+
+#menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+#menu li {
+    margin-left: 5rem;
+}
+
+#menu ul {
+    display: flex;
+    list-style: none
+}
+
+#menu a {
+    font-size: 2rem;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    text-decoration: none;
+}
+
+
+.logo {
+    width: 8rem;
+    height: 8rem;
+    padding: 1rem;
+}
+
+.fotoUsu {
+    width: 8rem;
+    height: 8rem;
+    padding: 1rem;
+}
+
+.perfil {
+    width: 5%;
+    padding: 0;
+}
+
+.nomUsuari {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 1rem;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    text-decoration: none;
+}
+
+.slideshow {
+    display: flex;
+    justify-content: center;
+    margin: 3rem;
+    padding: 3rem;
+}
+
+.slide {
+    border-radius: 1rem;
+    width: 110rem;
+    margin:0 auto;
+}
+
+
+
+footer{
+    background-color: rgba(22, 54, 143, 0.90);
+    opacity: 1;
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 6.3rem;
+}
+
+#terms p{
+    color: white; 
+    line-height: 25px;
+}
+
+#terms a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14.5px;
+    letter-spacing: 4px;
+    font-weight: 400;
+    border-bottom: 1px solid #cdcdcd;
+
+}
+
+#xsocials a{
+    font-size: 25px;
+    color: white;
+    letter-spacing: 5px;
+}
+
+#terms a:hover{
+    color: rgba(34,34,34, .4);
+}
+
+#xsocials a:hover{
+    color: rgba(34,34,34, .4);
+}
+
+nav a:hover{
+    color: rgba(34,34,34, .4);
+}
+
+footer p{
+    text-decoration: none;
+    color:white;
+    text-transform: uppercase;
+    font-size: 14.5px;
+    letter-spacing: 4px;
+    font-weight: 400;
+}
+
+#nav_b a {
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    font-size: 2rem;
+    border: 1px solid white;
+    width: 15rem;
+    display: inline-block;
+    padding: 8px;
+    text-align: center;
+}
+
+nav a span {
+    padding: 0 1rem;
+}
+
+#nav_b a:hover {
+    color: black;
+    background: white;
+}
+
+#nav_s {
+    display: none;
+}
